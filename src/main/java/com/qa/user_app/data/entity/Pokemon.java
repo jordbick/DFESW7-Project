@@ -18,11 +18,13 @@ public class Pokemon {
 
 	@Id // Primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	// automatically generated id
+	private Long id;
 
 	@NotNull
 	@Min(1)
 	@Max(898)
+	// range of pokedex entries
 	private Integer pokedexNumber;
 
 	@NotNull
@@ -36,6 +38,8 @@ public class Pokemon {
 	// Will have to set to string to be able to input into MySQL
 	private ArrayList<PokemonType> type;
 
+	
+	// no arg constructor
 	public Pokemon() {
 		super();
 	}
@@ -48,7 +52,7 @@ public class Pokemon {
 		this.type = type;
 	}
 
-	public Pokemon(Integer id, Integer pokedexNumber, String name, Boolean canEvolve, ArrayList<PokemonType> type) {
+	public Pokemon(Long id, Integer pokedexNumber, String name, Boolean canEvolve, ArrayList<PokemonType> type) {
 		super();
 		this.id = id;
 		this.pokedexNumber = pokedexNumber;
@@ -57,11 +61,13 @@ public class Pokemon {
 		this.type = type;
 	}
 
-	public Integer getId() {
+	// getters and setters for all fields
+	
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
