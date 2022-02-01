@@ -3,6 +3,7 @@ package com.qa.user_app.data.entity;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,18 +26,21 @@ public class Pokemon {
 	@Min(1)
 	@Max(898)
 	// range of pokedex entries
+	@Column(name = "pokedex_number")
 	private Integer pokedexNumber;
 
 	@NotNull
 	private String name;
 
 	@NotNull
+	@Column(name = "can_evolve")
 	private Boolean canEvolve;
 
 	@NotNull
 	// second may be null if only has one type
 	// Will have to set to string to be able to input into MySQL
-	private ArrayList<PokemonType> type;
+	// For now have string
+	private String type;
 
 	
 	// no arg constructor
@@ -44,7 +48,7 @@ public class Pokemon {
 		super();
 	}
 
-	public Pokemon(Integer pokedexNumber, String name, Boolean canEvolve, ArrayList<PokemonType> type) {
+	public Pokemon(Integer pokedexNumber, String name, Boolean canEvolve, String type) {
 		super();
 		this.pokedexNumber = pokedexNumber;
 		this.name = name;
@@ -52,7 +56,7 @@ public class Pokemon {
 		this.type = type;
 	}
 
-	public Pokemon(Long id, Integer pokedexNumber, String name, Boolean canEvolve, ArrayList<PokemonType> type) {
+	public Pokemon(Long id, Integer pokedexNumber, String name, Boolean canEvolve, String type) {
 		super();
 		this.id = id;
 		this.pokedexNumber = pokedexNumber;
@@ -95,11 +99,11 @@ public class Pokemon {
 		this.canEvolve = canEvolve;
 	}
 
-	public ArrayList<PokemonType> getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(ArrayList<PokemonType> type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 

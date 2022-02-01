@@ -42,7 +42,7 @@ public class PokemonController implements Controller<Pokemon>{
 	// READ BY ID
 	@Override
 	@GetMapping("/{id}")
-	public ResponseEntity<Pokemon> getById(Long id) {
+	public ResponseEntity<Pokemon> getById(@PathVariable("id") Long id) {
 		Pokemon pokeInDb = pokemonService.getById(id);
 		ResponseEntity<Pokemon> response = ResponseEntity.status(HttpStatus.OK).body(pokeInDb);
 		return response;

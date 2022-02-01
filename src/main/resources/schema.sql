@@ -2,13 +2,12 @@
 DROP TABLE IF EXISTS `pokemon`;
 
 CREATE TABLE `pokemon` (
-	`id` INT AUTO_INCREMENT,
-    `pokedexNumber` INT NOT NULL,
+	`id` LONG AUTO_INCREMENT,
+    `pokedex_number` INT NOT NULL,
     `name` VARCHAR(255) NOT NULL,
-    `canEvolve` BOOLEAN NOT NULL,
+    `can_evolve` BOOLEAN NOT NULL,
     `type` VARCHAR(255) NOT NULL,
     PRIMARY KEY(`id`),
-    -- <> is not equal to
-    CHECK(`pokedexNumber` >= 1),
-    CHECK(`pokedexNumber` <= 898)
+    CHECK(`pokedex_number` >= 1),
+    CHECK(`pokedex_number` <= 898)
 );

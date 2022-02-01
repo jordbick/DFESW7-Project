@@ -28,7 +28,7 @@ public class PokemonService implements IService<Pokemon> {
 	// read
 	@Override
 	public Pokemon getById(Long id) {
-		if (pokemonRepo.existsById(null)) {
+		if (pokemonRepo.existsById(id)) {
 			return pokemonRepo.findById(id).get();
 		} else {
 			return null;
