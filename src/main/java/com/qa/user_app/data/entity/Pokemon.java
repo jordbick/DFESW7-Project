@@ -1,17 +1,28 @@
 package com.qa.user_app.data.entity;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name = "pokemon")
@@ -37,10 +48,9 @@ public class Pokemon {
 	private Boolean canEvolve;
 
 	@NotNull
-	// second may be null if only has one type
-	// Will have to set to string to be able to input into MySQL
-	// For now have string
-	private String type;
+	@OneToMany(mappedBy = "pokemon", fetch = FetchType.LAZY)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	private List<Type> type;
 
 	
 	// no arg constructor
@@ -48,21 +58,19 @@ public class Pokemon {
 		super();
 	}
 
-	public Pokemon(Integer pokedexNumber, String name, Boolean canEvolve, String type) {
+	public Pokemon(Integer pokedexNumber, String name, Boolean canEvolve) {
 		super();
 		this.pokedexNumber = pokedexNumber;
 		this.name = name;
 		this.canEvolve = canEvolve;
-		this.type = type;
 	}
 
-	public Pokemon(Long id, Integer pokedexNumber, String name, Boolean canEvolve, String type) {
+	public Pokemon(Long id, Integer pokedexNumber, String name, Boolean canEvolve) {
 		super();
 		this.id = id;
 		this.pokedexNumber = pokedexNumber;
 		this.name = name;
 		this.canEvolve = canEvolve;
-		this.type = type;
 	}
 
 	// getters and setters for all fields
@@ -99,11 +107,11 @@ public class Pokemon {
 		this.canEvolve = canEvolve;
 	}
 
-	public String getType() {
+	public List<Type> getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(List<Type> type) {
 		this.type = type;
 	}
 
