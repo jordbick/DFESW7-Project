@@ -35,8 +35,13 @@ public class Type {
 		super();
 	}
 	
-	public Type(Long id) {
+	public Type(String name) {
+		this.name = name;
+	}
+	
+	public Type(Long id, String name) {
 		this.id = id;
+		this.name = name;
 	}
 
 	public Long getId() {

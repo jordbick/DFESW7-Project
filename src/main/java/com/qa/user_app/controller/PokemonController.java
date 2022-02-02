@@ -56,7 +56,7 @@ public class PokemonController implements Controller<Pokemon>{
 	public ResponseEntity<Pokemon> create(@Valid @RequestBody Pokemon pokemon) {
 		Pokemon createdPokemon = pokemonService.create(pokemon);
 		HttpHeaders header = new HttpHeaders();
-		header.add("Location", "/user/" + String.valueOf(createdPokemon.getId()));
+		header.add("Location", "/pokemon/" + String.valueOf(createdPokemon.getId()));
 
 		ResponseEntity<Pokemon> response = new ResponseEntity<Pokemon>
 		(createdPokemon, // body

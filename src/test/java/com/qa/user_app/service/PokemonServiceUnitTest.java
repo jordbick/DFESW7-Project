@@ -25,7 +25,7 @@ import com.qa.user_app.exceptions.PokemonAlreadyExists;
 
 //JUnit test runner
 @ExtendWith(MockitoExtension.class)
-public class PokemonServiceUnitTest {
+public class PokemonServiceUnitTest implements IServiceUnitTest{ 
 
 	@Mock // MockBean
 	private PokemonRepository pokemonRepo;
@@ -41,6 +41,7 @@ public class PokemonServiceUnitTest {
 	private Pokemon pokemonWithId;
 	private Pokemon updateDetails;
 	private Pokemon updatedPokemon;
+	private long nextPokemonId;
 
 	// Initialises data to the above before each test runs
 	@BeforeEach
@@ -51,15 +52,17 @@ public class PokemonServiceUnitTest {
 
 		foundPokemon = new Pokemon(1L, 1, "Bulbasaur", true);
 		invalidPokemon = new Pokemon(1, "Bulbasaur", true);
+		int listSize = pokemon.size();
+		nextPokemonId = pokemon.get(listSize - 1).getId() + 1;
 		pokemonWithoutId = new Pokemon(4, "Charmander", true);
-		pokemonWithId = new Pokemon(4L, 4, "Charmander", true);
+		pokemonWithId = new Pokemon(nextPokemonId, 4, "Charmander", true);
 		updateDetails = new Pokemon(2, "Bulbasaur", true);
 		updatedPokemon = new Pokemon(1L, 2, "Bulbasaur", true);
 	}
 
 	// READ all test
 	@Test
-	public void getAllPokemonTest() {
+	public void getAllTest() {
 		when(pokemonRepo.findAll()).thenReturn(pokemon);
 
 		assertThat(pokemonService.getAll()).isEqualTo(pokemon);
@@ -69,7 +72,7 @@ public class PokemonServiceUnitTest {
 
 	// READ by id test
 	@Test
-	public void getPokemonByIdTest() {
+	public void getByIdTest() {
 		long id = foundPokemon.getId();
 		when(pokemonRepo.findById(id)).thenReturn(Optional.of(foundPokemon));
 
@@ -80,22 +83,21 @@ public class PokemonServiceUnitTest {
 
 	// READ by invalid id test
 	@Test
-	public void getPokemonByInvalidIdTest() {
-		long id = 60L;
-		when(pokemonRepo.findById(id)).thenReturn(Optional.empty());
+	public void getByInvalidIdTest() {
+		when(pokemonRepo.findById(nextPokemonId)).thenReturn(Optional.empty());
 
 		ItemNotFoundException e = Assertions.assertThrows(ItemNotFoundException.class, () -> {
-			pokemonService.getById(id);
+			pokemonService.getById(nextPokemonId);
 		});
 
-		assertThat(e.getMessage()).isEqualTo("Pokemon with id " + id + " does not exist");
+		assertThat(e.getMessage()).isEqualTo("Pokemon with id " + nextPokemonId + " does not exist");
 
-		verify(pokemonRepo).findById(id);
+		verify(pokemonRepo).findById(nextPokemonId);
 	}
 
 	// CREATE test
 	@Test
-	public void createPokemonTest() {
+	public void createTest() {
 		when(pokemonRepo.existsByName(pokemonWithoutId.getName())).thenReturn(false);
 		when(pokemonRepo.save(pokemonWithoutId)).thenReturn(pokemonWithId);
 
@@ -121,7 +123,7 @@ public class PokemonServiceUnitTest {
 
 	// UPDATE test
 	@Test
-	public void updatePokemonTest() {
+	public void updateTest() {
 		long id = foundPokemon.getId();
 		when(pokemonRepo.existsById(id)).thenReturn(true);
 		when(pokemonRepo.getById(id)).thenReturn(foundPokemon);
@@ -137,22 +139,21 @@ public class PokemonServiceUnitTest {
 
 	// UPDATE test with invalid id
 	@Test
-	public void updatePokemonInvalidTest() {
-		long id = 43L;
-		when(pokemonRepo.existsById(id)).thenReturn(false);
+	public void updateInvalidTest() {
+		when(pokemonRepo.existsById(nextPokemonId)).thenReturn(false);
 
 		ItemNotFoundException e = Assertions.assertThrows(ItemNotFoundException.class, () -> {
-			pokemonService.update(id, updateDetails);
+			pokemonService.update(nextPokemonId, updateDetails);
 		});
 
-		assertThat(e.getMessage()).isEqualTo("Pokemon with id " + id + " does not exist");
+		assertThat(e.getMessage()).isEqualTo("Pokemon with id " + nextPokemonId + " does not exist");
 
-		verify(pokemonRepo).existsById(id);
+		verify(pokemonRepo).existsById(nextPokemonId);
 	}
 
 	// DELETE test
 	@Test
-	public void deletePokemonTest() {
+	public void deleteTest() {
 		long id = foundPokemon.getId();
 		when(pokemonRepo.existsById(id)).thenReturn(true);
 
@@ -165,17 +166,16 @@ public class PokemonServiceUnitTest {
 
 	// DELETE test with invalid id
 	@Test
-	public void deleteInvalidPokemonTest() {
-		long id = 56L;
-		when(pokemonRepo.existsById(id)).thenReturn(false);
+	public void deleteInvalidTest() {
+		when(pokemonRepo.existsById(nextPokemonId)).thenReturn(false);
 
 		ItemNotFoundException e = Assertions.assertThrows(ItemNotFoundException.class, () -> {
-			pokemonService.delete(id);
+			pokemonService.delete(nextPokemonId);
 		});
 
-		assertThat(e.getMessage()).isEqualTo("Pokemon with id " + id + " does not exist");
+		assertThat(e.getMessage()).isEqualTo("Pokemon with id " + nextPokemonId + " does not exist");
 
-		verify(pokemonRepo).existsById(id);
+		verify(pokemonRepo).existsById(nextPokemonId);
 	}
 
 }
