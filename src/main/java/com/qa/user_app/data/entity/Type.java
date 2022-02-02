@@ -21,7 +21,7 @@ public class Type {
 	// IDENTIFIER
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	
 	@Column(name = "pokemon_type", nullable = false)
 	private String name;
@@ -31,11 +31,11 @@ public class Type {
 	@JsonBackReference
 	private Pokemon pokemon;
 
-	public Type(int id) {
+	public Type(Long id) {
 		this.id = id;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -74,7 +74,7 @@ public class Type {
 
 	@Override
 	public String toString() {
-		return "Type [id=" + id + ", name=" + name + ", pokemon=" + pokemon + "]";
+		return  name;
 	}
 	
 	

@@ -6,7 +6,7 @@ CREATE TABLE `pokemon` (
     `pokedex_number` INT NOT NULL,
     `name` VARCHAR(255) NOT NULL,
     `can_evolve` BOOLEAN NOT NULL,
-    `type` VARCHAR(255) NOT NULL,
+    `type` VARCHAR(255),
     PRIMARY KEY(`id`),
     CHECK(`pokedex_number` >= 1),
     CHECK(`pokedex_number` <= 898)
