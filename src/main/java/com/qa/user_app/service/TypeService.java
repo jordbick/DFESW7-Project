@@ -26,11 +26,9 @@ public class TypeService implements IService<Type> {
 
 	@Override
 	public Type getById(Long id) {
-		if (typeRepo.existsById(id)) {
-			return typeRepo.findById(id).get();
-		} else {
-			throw new ItemNotFoundException("Type with id " + id + " does not exist");
-		}
+		return typeRepo.findById(id).orElseThrow(() -> {
+			return new ItemNotFoundException("Type with id " + id + " does not exist");
+		});
 	}
 
 	@Override

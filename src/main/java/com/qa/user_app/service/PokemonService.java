@@ -32,11 +32,9 @@ public class PokemonService implements IService<Pokemon> {
 	// READ
 	@Override
 	public Pokemon getById(Long id) {
-		if (pokemonRepo.existsById(id)) {
-			return pokemonRepo.findById(id).get();
-		} else {
-			throw new ItemNotFoundException("Pokemon with id " + id + " does not exist");
-		}
+		return pokemonRepo.findById(id).orElseThrow(() -> {
+			return new ItemNotFoundException("Pokemon with id " + id + " does not exist");
+		});
 	}
 
 	// CREATE
