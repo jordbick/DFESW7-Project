@@ -31,6 +31,10 @@ public class Type {
 	@JsonBackReference
 	private Pokemon pokemon;
 
+	public Type() {
+		super();
+	}
+	
 	public Type(Long id) {
 		this.id = id;
 	}
