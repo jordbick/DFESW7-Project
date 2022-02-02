@@ -72,7 +72,7 @@ public class Pokemon {
 		this.canEvolve = canEvolve;
 	}
 
-	// getters and setters for all fields
+	// Getters and Setters
 	
 	public Long getId() {
 		return id;

@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import com.qa.user_app.data.entity.Pokemon;
 import com.qa.user_app.data.repository.PokemonRepository;
 import com.qa.user_app.exceptions.ItemNotFoundException;
+import com.qa.user_app.exceptions.PokemonAlreadyExists;
+
+// Service communicates with repository
 
 @Service
 public class PokemonService implements IService<Pokemon> {
@@ -20,13 +23,13 @@ public class PokemonService implements IService<Pokemon> {
 		this.pokemonRepo = pokemonRepo;
 	}
 
-	// read all
+	// READ ALL
 	@Override
 	public List<Pokemon> getAll() {
 		return pokemonRepo.findAll();
 	}
 
-	// read
+	// READ
 	@Override
 	public Pokemon getById(Long id) {
 		if (pokemonRepo.existsById(id)) {
@@ -36,9 +39,14 @@ public class PokemonService implements IService<Pokemon> {
 		}
 	}
 
+	// CREATE
 	@Override
 	public Pokemon create(Pokemon pokemon) {
+		if(!pokemonRepo.existsByName(pokemon.getName())) {
 		return pokemonRepo.save(pokemon);
+		} else {
+			throw new PokemonAlreadyExists("Pokemon with name " + pokemon.getName() + " already exists");
+		}
 	}
 
 	@Override
