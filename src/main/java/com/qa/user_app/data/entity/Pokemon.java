@@ -44,10 +44,9 @@ public class Pokemon {
 	private String name;
 
 	@NotNull
-	@Column(name = "can_evolve")
+	@Column(name = "can_evolve", columnDefinition = "TINYINT")
 	private Boolean canEvolve;
 
-	@NotNull
 	@OneToMany(mappedBy = "pokemon", fetch = FetchType.LAZY)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private List<Type> type;
