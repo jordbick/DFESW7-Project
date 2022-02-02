@@ -1,6 +1,7 @@
 -- drop for testing so any new app contexts that are spawned will be fresh
-DROP TABLE IF EXISTS `pokemon`;
 DROP TABLE IF EXISTS `type`;
+DROP TABLE IF EXISTS `pokemon`;
+
 
 CREATE TABLE `pokemon` (
 	`id` BIGINT AUTO_INCREMENT,

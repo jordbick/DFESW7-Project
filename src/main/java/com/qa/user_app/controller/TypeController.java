@@ -50,7 +50,7 @@ public class TypeController implements Controller<Type> {
 	public ResponseEntity<Type> create(@Valid @RequestBody Type type) {
 		Type createdType = typeService.create(type);
 		HttpHeaders header = new HttpHeaders();
-		header.add("Location", "/user/" + String.valueOf(createdType.getId()));
+		header.add("Location", "/type/" + String.valueOf(createdType.getId()));
 
 		ResponseEntity<Type> response = new ResponseEntity<Type>(createdType, // body
 				header, // Http Header
