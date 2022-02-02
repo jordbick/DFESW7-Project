@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.qa.user_app.data.entity.Pokemon;
 import com.qa.user_app.data.repository.PokemonRepository;
+import com.qa.user_app.exceptions.ItemNotFoundException;
 
 @Service
 public class PokemonService implements IService<Pokemon> {
@@ -31,8 +32,7 @@ public class PokemonService implements IService<Pokemon> {
 		if (pokemonRepo.existsById(id)) {
 			return pokemonRepo.findById(id).get();
 		} else {
-			return null;
-			// TODO - Throw exception
+			throw new ItemNotFoundException("Pokemon with id " + id + " does not exist");
 		}
 	}
 
@@ -51,7 +51,7 @@ public class PokemonService implements IService<Pokemon> {
 			updatedPokemon.setType(pokemon.getType());
 			return pokemonRepo.save(updatedPokemon);
 		} else {
-			return null;
+			throw new ItemNotFoundException("Pokemon with id " + id + " does not exist");
 		}
 		
 		// TODO throw Exception
@@ -64,9 +64,8 @@ public class PokemonService implements IService<Pokemon> {
 		if (pokemonRepo.existsById(id)) {
 			pokemonRepo.deleteById(id);
 		} else {
-			System.out.println("Pokemon with " + id + " does not exist");;
+			throw new ItemNotFoundException("Pokemon with id " + id + " does not exist");
 		}
-		// TODO throw exception
 
 	}
 

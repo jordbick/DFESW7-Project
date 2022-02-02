@@ -7,17 +7,18 @@ import org.springframework.stereotype.Service;
 
 import com.qa.user_app.data.entity.Type;
 import com.qa.user_app.data.repository.TypeRepository;
+import com.qa.user_app.exceptions.ItemNotFoundException;
 
 @Service
-public class TypeService implements IService<Type>{
+public class TypeService implements IService<Type> {
 
 	private TypeRepository typeRepo;
-	
+
 	@Autowired
 	public TypeService(TypeRepository typeRepo) {
 		this.typeRepo = typeRepo;
 	}
-	
+
 	@Override
 	public List<Type> getAll() {
 		return typeRepo.findAll();
@@ -28,7 +29,7 @@ public class TypeService implements IService<Type>{
 		if (typeRepo.existsById(id)) {
 			return typeRepo.findById(id).get();
 		} else {
-			return null;
+			throw new ItemNotFoundException("Type with id " + id + " does not exist");
 		}
 	}
 
@@ -45,7 +46,7 @@ public class TypeService implements IService<Type>{
 			updatedType.setPokemon(type.getPokemon());
 			return typeRepo.save(updatedType);
 		} else {
-			return null;
+			throw new ItemNotFoundException("Type with id " + id + " does not exist");
 		}
 	}
 
@@ -54,9 +55,9 @@ public class TypeService implements IService<Type>{
 		if (typeRepo.existsById(id)) {
 			typeRepo.deleteById(id);
 		} else {
-			System.out.println("Type with " + id + " does not exist");;
+			throw new ItemNotFoundException("Type with id " + id + " does not exist");
 		}
-		
+
 	}
 
 }
