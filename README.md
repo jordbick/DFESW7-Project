@@ -16,7 +16,7 @@
     <li><a href="#Why-are-we-doing-this">Why are we doing this?</a></li>
     <li><a href="#How-I-expected-the-challenge-to-go">How I expected the challenge to go</a></li>
     <li><a href="#what-went-well">What went well</a></li>
-    <li><a href="#what-didn't-go-as-planned">What didn't go as planned</a></li>
+    <li><a href="#less-well">What didn't go as planned</a></li>
     <li><a href="#Possible-improvements-for-future-revisions">Possible improvements for future revisions</a></li>
     <li><a href="#Postman---API-Screenshots">Postman-API Screenshots</a></li>
     <li><a href="#Database-screenshots-to-show-Data-is-being-persistence">Screenshots to show data is being persisted in database</a></li>
@@ -83,6 +83,7 @@ Finally, and actually most importantly, I thoroughly enjoyed the process of gett
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<div id="less-well"></div>
 ## What didn't go as planned
 My SQL language recall was very rusty going into the project so it made the setup of MySQL databases a particularly slow and difficult process, for which I had to seek assistance for when MySQL refused to recognise Long or Boolean datatypes and I could only use BIGINTS and TINYINTS. I also attempted to use enums for the pokemon types however I also wanted to set this up as a data entity. I spent quite a long time on this and eventually had to abandon this task. I do now see how I could use enums in my project but time did not allow for me to implement this.
 
@@ -116,12 +117,17 @@ As mentioned above I would like to implement enums to restrict the pokemon types
 
 #### Update Pokemon (changed Venasaur canEvolve field to false)
 Before
+
 ![pokemon before update](https://user-images.githubusercontent.com/94956101/152333961-aa360e57-1a61-4a83-b766-d8313ed3f39a.png)
 
+
 Update method
+
 ![update pokemon](https://user-images.githubusercontent.com/94956101/152334161-b5848381-fd08-4796-8e3a-ce44bd65e603.png)
 
+
 After
+
 ![pokemon after update](https://user-images.githubusercontent.com/94956101/152334204-b1a060e8-ea5a-4d2b-8b29-220ada30694a.png)
 
 
@@ -134,10 +140,14 @@ Changes persisted in Pokemon class with the types changes
 #### Delete pokemon
 ![delete pokemon](https://user-images.githubusercontent.com/94956101/152330914-0aaf08d6-509d-40f3-8407-6978ea318b13.png)
 
+
 Get Pokemon by id displaying Pokemon no longer exists in database
+
 ![delete pokemon not appearing in get statement](https://user-images.githubusercontent.com/94956101/152331010-38b77dbb-1894-44eb-828d-002de906df9a.png)
 
+
 Also deletes the associated type for that Pokemon
+
 ![deleted associated type](https://user-images.githubusercontent.com/94956101/152331418-a4f4b937-e32a-4525-84e0-b55f9a1474f6.png)
 
 
