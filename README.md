@@ -83,7 +83,7 @@ Finally, and actually most importantly, I thoroughly enjoyed the process of gett
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## What didn't go as planned?
+## What didn't go as planned
 My SQL language recall was very rusty going into the project so it made the setup of MySQL databases a particularly slow and difficult process, for which I had to seek assistance for when MySQL refused to recognise Long or Boolean datatypes and I could only use BIGINTS and TINYINTS. I also attempted to use enums for the pokemon types however I also wanted to set this up as a data entity. I spent quite a long time on this and eventually had to abandon this task. I do now see how I could use enums in my project but time did not allow for me to implement this.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -98,14 +98,14 @@ As mentioned above I would like to implement enums to restrict the pokemon types
 #### Create pokemon when Pokemon name already exists in the database
 ![create invalid pokemon](https://user-images.githubusercontent.com/94956101/152328208-5df2f834-f381-486f-b7c6-cdc7024317b5.png)
 
-#### Create type for Pokemon that already exists
+#### Create type for Pokemon
 ![create type](https://user-images.githubusercontent.com/94956101/152328005-68fababa-097b-4849-b0b8-e181f4176e19.png)
 
 #### Get all Pokemon
 ![get all pokemon](https://user-images.githubusercontent.com/94956101/152328707-ca0b0539-7d01-439d-9a18-d64de66b7bfe.png)
 
 #### Get all types
-![get all types](https://user-images.githubusercontent.com/94956101/152328827-f9049cc8-4c11-46ca-94dc-f9c6d9cfad51.png)
+![get all types](https://user-images.githubusercontent.com/94956101/152333620-293fe9f2-6b51-44e7-beef-6f3d0b55fde3.png)
 
 #### Get Pokemon by ID
 ![get pokemon by id](https://user-images.githubusercontent.com/94956101/152329608-856f6958-cbc9-4858-9b18-6c0853f91566.png)
@@ -114,8 +114,16 @@ As mentioned above I would like to implement enums to restrict the pokemon types
 #### Get type by ID
 ![get type by id](https://user-images.githubusercontent.com/94956101/152329432-b8261c22-c809-455b-91e5-44e52df7781b.png)
 
-#### Update Pokemon (changed Bulbasaur canEvolve field to false)
-![update pokemon](https://user-images.githubusercontent.com/94956101/152329824-3b979bde-4682-4040-adab-005922947bf0.png)
+#### Update Pokemon (changed Venasaur canEvolve field to false)
+Before
+![pokemon before update](https://user-images.githubusercontent.com/94956101/152333961-aa360e57-1a61-4a83-b766-d8313ed3f39a.png)
+
+Update method
+![update pokemon](https://user-images.githubusercontent.com/94956101/152334161-b5848381-fd08-4796-8e3a-ce44bd65e603.png)
+
+After
+![pokemon after update](https://user-images.githubusercontent.com/94956101/152334204-b1a060e8-ea5a-4d2b-8b29-220ada30694a.png)
+
 
 #### Update type (changed name of type and which Pokemon it relates to)
 ![update type](https://user-images.githubusercontent.com/94956101/152330254-65a7e154-7694-46ff-984f-900af538527d.png)
