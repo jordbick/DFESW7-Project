@@ -21,7 +21,7 @@
     <li><a href="#Postman-/-API-Screenshots">Postman/ API Screenshots</a></li>
     <li><a href="#Screenshots-to-show-data-is-being-persisted-in-the-database">Screenshots to show data is being persisted in the database</a></li>
     <li><a href="#Screenshots-of-test-results-including-coverage-report">Screenshot of test results, including coverage report.</a></li>
-    <li><a href="#Link-to-jira-board">Link to Jira board</a></li>
+    <li><a href="#Link-to-Jira-board">Link to Jira board</a></li>
   </ol>
 </details>
 
