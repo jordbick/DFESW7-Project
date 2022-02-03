@@ -144,8 +144,9 @@ MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.request(HttpM
 		ResultMatcher contentMatcher = MockMvcResultMatchers.content().json(typeReturned);
 		
 		mockMvc.perform(mockRequest).andExpect(statusMatcher).andExpect(contentMatcher);
-		
 	}
+	
+	@Test
 	@Override
 	public void updateInvalidTest() throws Exception {
 		Type newType = new Type("Flying");
@@ -166,6 +167,8 @@ MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.request(HttpM
 		mockMvc.perform(mockRequest).andExpect(statusMatcher).andExpect(contentMatcher);
 		
 	}
+	
+	@Test
 	@Override
 	public void deleteTest() throws Exception {
 		Type typeToDelete = typeInDb.get(0);
@@ -179,6 +182,7 @@ MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.request(HttpM
 		
 	}
 
+	@Test
 	@Override
 	public void deleteInvalidTest() throws Exception {
 		
