@@ -84,10 +84,10 @@ Finally, and actually most importantly, I thoroughly enjoyed the process of gett
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## What didn't go as planned
 <p>
 <div id="less-well"></div>
 </p>
+## What didn't go as planned
 My SQL language recall was very rusty going into the project so it made the setup of MySQL databases a particularly slow and difficult process, for which I had to seek assistance for when MySQL refused to recognise Long or Boolean datatypes and I could only use BIGINTS and TINYINTS. I also attempted to use enums for the pokemon types however I also wanted to set this up as a data entity. I spent quite a long time on this and eventually had to abandon this task. I do now see how I could use enums in my project but time did not allow for me to implement this.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
