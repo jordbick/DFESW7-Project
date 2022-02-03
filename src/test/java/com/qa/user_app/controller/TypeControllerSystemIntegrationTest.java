@@ -24,9 +24,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.user_app.data.entity.Type;
-import com.qa.user_app.data.entity.Type;
 import com.qa.user_app.data.repository.TypeRepository;
-import com.qa.user_app.service.TypeService;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc

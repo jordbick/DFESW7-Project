@@ -47,8 +47,7 @@ public class PokemonController implements Controller<Pokemon>{
 		ResponseEntity<Pokemon> response = ResponseEntity.status(HttpStatus.OK).body(pokeInDb);
 		return response;
 	}
-
-	// TODO other read methods
+	
 
 	// CREATE
 	@Override
@@ -63,8 +62,6 @@ public class PokemonController implements Controller<Pokemon>{
 				header, // Http Header
 				HttpStatus.CREATED); // Response status
 		return response;
-		
-		// TODO should throw exception if pokedex number outside of range
 	}
 	
 	// UPDATE
@@ -74,9 +71,6 @@ public class PokemonController implements Controller<Pokemon>{
 		Pokemon updatedPokemon = pokemonService.update(id, pokemon);
 		ResponseEntity<Pokemon> response = ResponseEntity.status(HttpStatus.ACCEPTED).body(updatedPokemon);
 		return response;
-		
-		//TODO should throw exception if pokedex vaues out of range
-		// Exception if id does not exist
 	}
 
 	// DELETE
@@ -84,7 +78,6 @@ public class PokemonController implements Controller<Pokemon>{
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id) {
 		pokemonService.delete(id);
-		
 		return ResponseEntity.accepted().build();
 	}
 	

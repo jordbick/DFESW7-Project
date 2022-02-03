@@ -31,12 +31,14 @@ public class TypeController implements Controller<Type> {
 		this.typeService = typeService;
 	}
 
+	// READ ALL
 	@Override
 	@GetMapping
 	public ResponseEntity<List<Type>> getAll() {
 		return ResponseEntity.ok(typeService.getAll());
 	}
 
+	// READ BY ID
 	@Override
 	@GetMapping("/{id}")
 	public ResponseEntity<Type> getById(@PathVariable("id") Long id) {
@@ -45,6 +47,7 @@ public class TypeController implements Controller<Type> {
 		return response;
 	}
 
+	// CREATE
 	@Override
 	@PostMapping
 	public ResponseEntity<Type> create(@Valid @RequestBody Type type) {
@@ -58,6 +61,7 @@ public class TypeController implements Controller<Type> {
 		return response;
 	}
 
+	// UPDATE
 	@Override
 	@PutMapping("/{id}")
 	public ResponseEntity<Type> update(@PathVariable("id") Long id, @Valid @RequestBody Type type) {
@@ -66,6 +70,7 @@ public class TypeController implements Controller<Type> {
 		return response;
 	}
 
+	// DELETE
 	@Override
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id) {

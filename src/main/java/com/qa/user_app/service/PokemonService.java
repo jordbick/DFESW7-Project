@@ -47,6 +47,7 @@ public class PokemonService implements IService<Pokemon> {
 		}
 	}
 
+	// UPDATE 
 	@Override
 	public Pokemon update(Long id, Pokemon pokemon) {
 		if (pokemonRepo.existsById(id)) {
@@ -59,11 +60,9 @@ public class PokemonService implements IService<Pokemon> {
 		} else {
 			throw new ItemNotFoundException("Pokemon with id " + id + " does not exist");
 		}
-		
-		// TODO throw Exception
-		
 	}
 
+	// DELETE
 	@Override
 	public void delete(Long id) {
 		

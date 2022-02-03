@@ -18,7 +18,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import com.qa.user_app.data.entity.Pokemon;
-import com.qa.user_app.data.repository.PokemonRepository;
 import com.qa.user_app.service.PokemonService;
 
 // Start application with only beans for the controller layer

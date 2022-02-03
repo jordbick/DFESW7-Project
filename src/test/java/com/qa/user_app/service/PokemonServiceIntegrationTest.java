@@ -13,10 +13,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.qa.user_app.controller.IControllerSystemIntegrationTest;
 import com.qa.user_app.data.entity.Pokemon;
 import com.qa.user_app.data.repository.PokemonRepository;
-import com.qa.user_app.exceptions.ItemNotFoundException;
 
 // Testing service integration
 

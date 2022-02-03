@@ -25,7 +25,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.user_app.data.entity.Pokemon;
 import com.qa.user_app.data.repository.PokemonRepository;
-import com.qa.user_app.exceptions.ItemNotFoundException;
 
 
 // random port selected for testing web environment

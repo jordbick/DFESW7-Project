@@ -19,11 +19,13 @@ public class TypeService implements IService<Type> {
 		this.typeRepo = typeRepo;
 	}
 
+	// READ ALL
 	@Override
 	public List<Type> getAll() {
 		return typeRepo.findAll();
 	}
 
+	// READ BY ID
 	@Override
 	public Type getById(Long id) {
 		return typeRepo.findById(id).orElseThrow(() -> {
@@ -31,11 +33,13 @@ public class TypeService implements IService<Type> {
 		});
 	}
 
+	// CREATE
 	@Override
 	public Type create(Type type) {
 		return typeRepo.save(type);
 	}
 
+	// UPDATE
 	@Override
 	public Type update(Long id, Type type) {
 		if (typeRepo.existsById(id)) {
@@ -48,6 +52,7 @@ public class TypeService implements IService<Type> {
 		}
 	}
 
+	// DELETE
 	@Override
 	public void delete(Long id) {
 		if (typeRepo.existsById(id)) {
