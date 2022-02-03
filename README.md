@@ -16,7 +16,7 @@
     <li><a href="#Why-are-we-doing-this">Why are we doing this?</a></li>
     <li><a href="#How-I-expected-the-challenge-to-go">How I expected the challenge to go</a></li>
     <li><a href="#what-went-well">What went well</a></li>
-    <li><a href="#less-well">What didn't go as planned</a></li>
+    <li><a href="#What-went-less-well">What went less well/a></li>
     <li><a href="#Possible-improvements-for-future-revisions">Possible improvements for future revisions</a></li>
     <li><a href="#Postman---API-Screenshots">Postman-API Screenshots</a></li>
     <li><a href="#Database-screenshots-to-show-Data-is-being-persistence">Screenshots to show data is being persisted in database</a></li>
@@ -84,10 +84,7 @@ Finally, and actually most importantly, I thoroughly enjoyed the process of gett
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<p>
-<div id="less-well"></div>
-</p>
-## What didn't go as planned
+## What went less well
 My SQL language recall was very rusty going into the project so it made the setup of MySQL databases a particularly slow and difficult process, for which I had to seek assistance for when MySQL refused to recognise Long or Boolean datatypes and I could only use BIGINTS and TINYINTS. I also attempted to use enums for the pokemon types however I also wanted to set this up as a data entity. I spent quite a long time on this and eventually had to abandon this task. I do now see how I could use enums in my project but time did not allow for me to implement this.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
