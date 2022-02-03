@@ -83,14 +83,19 @@ Finally, and actually most importantly, I thoroughly enjoyed the process of gett
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<div id="less-well"></div>
+
 ## What didn't go as planned
+<p>
+<div id="less-well"></div>
+</p>
 My SQL language recall was very rusty going into the project so it made the setup of MySQL databases a particularly slow and difficult process, for which I had to seek assistance for when MySQL refused to recognise Long or Boolean datatypes and I could only use BIGINTS and TINYINTS. I also attempted to use enums for the pokemon types however I also wanted to set this up as a data entity. I spent quite a long time on this and eventually had to abandon this task. I do now see how I could use enums in my project but time did not allow for me to implement this.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Possible improvements for future revisions
 As mentioned above I would like to implement enums to restrict the pokemon types that can be inputted. I would also like to include further custom queries such as 'find by type' as I originally intended and to include the use of DTOs. Finally, a front end would be important to implement but this was outside the scope of this project.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Postman-API Acreenshots
 #### Create Pokemon if Pokemon name doesn't already exist in the database
@@ -151,7 +156,7 @@ Also deletes the associated type for that Pokemon
 ![deleted associated type](https://user-images.githubusercontent.com/94956101/152331418-a4f4b937-e32a-4525-84e0-b55f9a1474f6.png)
 
 
-## Delete type
+#### Delete type
 ![delete type](https://user-images.githubusercontent.com/94956101/152331543-34d8f087-0378-4508-bd95-b67d3ec3c3b1.png)
 
 Get type by id displaying Pokemon no longer exists in database
