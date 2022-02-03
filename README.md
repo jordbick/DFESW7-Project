@@ -18,11 +18,13 @@
     <li><a href="#what-went-well">What went well</a></li>
     <li><a href="#What-went-less-well">What went less well</a></li>
     <li><a href="#Possible-improvements-for-future-revisions">Possible improvements for future revisions</a></li>
-    <li><a href="#Postman---API-Screenshots">Postman-API Screenshots</a></li>
-    <li><a href="#Screenshots-to-show-Data-is-being-persisted in the database">Screenshots to show data is being persisted in the database</a></li>
-    <li><a href="#Link-to-my-jira-board">Link to my Jira board</a></li>
+    <li><a href="#Postman-/-API-Screenshots">Postman/ API Screenshots</a></li>
+    <li><a href="#Screenshots-to-show-data-is-being-persisted-in-the-database">Screenshots to show data is being persisted in the database</a></li>
+    <li><a href="#Screenshots-of-test-results-including-coverage-report">Screenshot of test results, including coverage report.</a></li>
+    <li><a href="#Link-to-jira-board">Link to Jira board</a></li>
   </ol>
 </details>
+
 
 <!-- About the project -->
 
@@ -94,7 +96,7 @@ As mentioned above I would like to implement enums to restrict the pokemon types
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Postman-API Acreenshots
+## Postman / API Acreenshots
 #### Create Pokemon if Pokemon name doesn't already exist in the database
 ![create Pokemon](https://user-images.githubusercontent.com/94956101/152327662-514c799e-18c9-4efb-83c7-72039ac6840c.png)
 
@@ -300,8 +302,40 @@ Datain MySQL with corresponding changes
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<p><b>o	Screenshot of your test results, including coverage report.</b></p>
+## Screenshot of test results including coverage report
 
-<p></p>
-<p><b>o	Link to Jira Board - You must add Morgan Walsh and Jordan Benbelaid as collaborators on your Jira board. </b></p>
+#### Service Unit Testing
+
+![image](https://user-images.githubusercontent.com/94956101/152357670-dd527adc-932d-42d7-b9b8-25da8158bcfc.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+#### Service Integration Testing
+
+![image](https://user-images.githubusercontent.com/94956101/152357847-8ba213f8-fbaf-45ec-bb47-91a635790027.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+#### Controller System Integration Testing
+
+![image](https://user-images.githubusercontent.com/94956101/152358815-65e53ee1-be25-4167-8f0d-241add7fd6b7.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+#### Controller Web Integration Testing
+
+![image](https://user-images.githubusercontent.com/94956101/152358957-e812769b-c304-4b8c-879b-0e4cf02fae98.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+#### Testing Coverage
+Coverage of 82% on main
+
+![image](https://user-images.githubusercontent.com/94956101/152359420-2d1e5094-dab9-4cf0-8d23-21e324508c80.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Link to Jira Board
+[Here](https://jordanbick.atlassian.net/jira/software/projects/DFP/boards/2) is a link to my Jira Board
 
