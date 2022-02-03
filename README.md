@@ -5,8 +5,6 @@
 # QA Project DFESW7
 >Pokemon REST API written in JAVA with SpringBoot framework
 
-<h1>Final project for QA Software Development Bootcamp</h1>
-<p></p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
