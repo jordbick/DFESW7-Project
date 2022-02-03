@@ -14,11 +14,11 @@
     <li><a href="#MVP-Requirements"> MVP Requirements</a></li>
     <li><a href="#Built-with">Built With</a></li>
     <li><a href="#Why-are-we-doing-this">Why are we doing this?</a></li>
-    <li><a href="#How-I-expected-things-to-go">How I expected the challenge to go</a></li>
+    <li><a href="#How-I-expected-the-challenge-to-go">How I expected the challenge to go</a></li>
     <li><a href="#what-went-well">What went well</a></li>
-    <li><a href="#what-went-wrong">What went wrong</a></li>
+    <li><a href="#what-didn't-go-as-planned">What didn't go as planned</a></li>
     <li><a href="#Possible-improvements-for-future-revisions">Possible improvements for future revisions</a></li>
-    <li><a href="#Postman-API-Screenshots">Postman-API Screenshots</a></li>
+    <li><a href="#Postman---API-Screenshots">Postman-API Screenshots</a></li>
     <li><a href="#Database-screenshots-to-show-Data-is-being-persistence">Screenshots to show data is being persisted in database</a></li>
     <li><a href="#Link-to-my-jira-board">Link to my Jira board</a></li>
   </ol>
@@ -66,7 +66,7 @@ Create a Spring Boot API, with utilisation of supporting tools, methodologies, a
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Why are we doing this?
+## Why are we doing this
 This project is the culmination of 9 weeks worth of learning with the QA Software Development Bootcamp. During this time we covered a variety of topics oncluding Java, Spring Boot, testing and MySQL along with many other things. To conclude this learning period we have been tasked with creating this project to put our knowledge and skills learnt to the test!
 I have created a Pokemon app, that allows users to store Pokemon and their types within a database. The app has full CRUD functionality, two data entities with a one-to-many relationship, custom exceptions and fully designed test suites with coverage >80%.
 
@@ -77,7 +77,7 @@ I was pretty pessimistic going into the project initially as I felt I had barely
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## What went well?
+## What went well
 First and foremost I have a fully functioning (basic) REST API with CRUD functionality. My integration and unit testing works as expected with >80% coverage (which took a very long time). I also was able to add two data entities to my project as a stretch goal, which have a one-to-many relationship.
 Finally, and actually most importantly, I thoroughly enjoyed the process of getting lost in my project/code and look forward to expanding my knowledge and skillset to be able to create further and more complications projects.
 
@@ -88,7 +88,7 @@ My SQL language recall was very rusty going into the project so it made the setu
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Possible improvements for future revisions of the project
+## Possible improvements for future revisions
 As mentioned above I would like to implement enums to restrict the pokemon types that can be inputted. I would also like to include further custom queries such as 'find by type' as I originally intended and to include the use of DTOs. Finally, a front end would be important to implement but this was outside the scope of this project.
 
 ## Postman-API Acreenshots
