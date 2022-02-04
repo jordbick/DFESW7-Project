@@ -127,8 +127,18 @@ As mentioned above I would like to implement enums to restrict the pokemon types
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+#### Get Pokemon by invalid ID
+![image](https://user-images.githubusercontent.com/94956101/152545863-6400c28e-e67f-43a1-8339-42cbca0089e6.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 #### Get type by ID
 ![get type by id](https://user-images.githubusercontent.com/94956101/152329432-b8261c22-c809-455b-91e5-44e52df7781b.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+#### Get type by invalid ID
+![image](https://user-images.githubusercontent.com/94956101/152546032-3802382f-eed1-49f4-9fd4-f9e116de31f3.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -150,6 +160,13 @@ After
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+#### Update Pokemon by invalid ID
+![image](https://user-images.githubusercontent.com/94956101/152546433-7bbe94f0-7506-43bd-b99b-c5d060e338e6.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 #### Update type (changed name of type and which Pokemon it relates to)
 ![update type](https://user-images.githubusercontent.com/94956101/152330254-65a7e154-7694-46ff-984f-900af538527d.png)
 
@@ -158,7 +175,14 @@ Changes persisted in Pokemon class with the types changes
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-#### Delete pokemon
+
+#### Update type by invalid id
+![image](https://user-images.githubusercontent.com/94956101/152546683-ad191a66-86e2-4ca0-988c-7520f40875de.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+#### Delete Pokemon
 ![delete pokemon](https://user-images.githubusercontent.com/94956101/152330914-0aaf08d6-509d-40f3-8407-6978ea318b13.png)
 
 
@@ -173,6 +197,13 @@ Also deletes the associated type for that Pokemon
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+#### Delete Pokemon by invalid ID
+![image](https://user-images.githubusercontent.com/94956101/152546864-300ddb64-3f22-4ee6-ab68-a7a2be9c2d1e.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 #### Delete type
 ![delete type](https://user-images.githubusercontent.com/94956101/152331543-34d8f087-0378-4508-bd95-b67d3ec3c3b1.png)
 
@@ -183,6 +214,12 @@ The deleted type now does not appear in the Pokemon class
 ![deleted type in pokemon](https://user-images.githubusercontent.com/94956101/152331844-2fd08363-d129-41a1-b546-a494aa8dfec7.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+#### Delete type by invalid ID
+![image](https://user-images.githubusercontent.com/94956101/152546965-9d58d326-6ac7-406a-9c6a-ac8ebe15dc14.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ## Screenshots to show data is being persisted in the database
 Screenshot to show the database on initialisation. It currently has one entry as I am running the production mode in validate so any previous entries are saved
