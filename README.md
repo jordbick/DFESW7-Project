@@ -198,7 +198,7 @@ Also deletes the associated type for that Pokemon
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## Delete Pokemon by invalid ID
+#### Delete Pokemon by invalid ID
 ![image](https://user-images.githubusercontent.com/94956101/152546864-300ddb64-3f22-4ee6-ab68-a7a2be9c2d1e.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
